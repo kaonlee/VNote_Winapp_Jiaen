@@ -141,8 +141,9 @@
 			this.Controls.Add(this.txtUrl);
 			this.Font = new System.Drawing.Font("Microsoft YaHei", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.MinimumSize = new System.Drawing.Size(780, 550);
 			this.Name = "SearchYTVideoUrl";
-			this.Size = new System.Drawing.Size(800, 600);
+			this.Size = new System.Drawing.Size(780, 550);
 			this.Load += new System.EventHandler(this.SearchYTVideoUrl_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

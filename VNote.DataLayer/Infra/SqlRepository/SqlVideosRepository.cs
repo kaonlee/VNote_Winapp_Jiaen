@@ -7,6 +7,8 @@ using VNote.DataLayer.Cores;
 using VNote.DataLayer.Interface;
 using System.Configuration;
 using VNote.DataLayer.SqlDb;
+using System.Data.SqlClient;
+using VNote.DataLayer.DTOs;
 
 namespace VNote.DataLayer.Infra.SqlRepository
 {
@@ -46,7 +48,23 @@ namespace VNote.DataLayer.Infra.SqlRepository
 
 		public VideosEntity Get(string videoId)
 		{
-			throw new NotImplementedException();
+			string sql = $"select * from Videos where VideoId = '{videoId}'";
+
+			Func<SqlDataReader, VideosEntity> funcAssembler =
+				reader =>
+				{
+					string videoTitle = reader.GetString("VideoTitle");
+					string thumbnailUrl = reader.GetString("ThumbnailUrl");
+					string channelId = reader.GetString("ChannelID");
+					string channelTitle = reader.GetString("ChannelName");
+					bool isStreamVideo = (bool)reader.GetBool("IsStreamVideo");
+					DateTime? liveStartedAt = reader.GetDateTime("LiveStartedAt",DateTime.MinValue);
+					DateTime? publishedAt = reader.GetDateTime("PublishedAt",DateTime.MinValue);
+					int durationSecond = reader.GetInt32("DurationSecond",0);
+					return new VideosEntity(videoId, videoTitle, thumbnailUrl, channelId, channelTitle, isStreamVideo, liveStartedAt, publishedAt, durationSecond);
+				};
+
+			return SqlDb.SqlDb.Get<VideosEntity>(SqlDb.SqlDb.GetSqlConnection, funcAssembler, sql);
 		}
 
 		public List<VideosEntity> Search(VideoSearchCriteria searchCriteria)

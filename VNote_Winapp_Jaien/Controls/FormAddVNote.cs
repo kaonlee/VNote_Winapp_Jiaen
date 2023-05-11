@@ -14,45 +14,66 @@ using VNote.DataLayer.Service;
 
 namespace VNote_Winapp_Jaien.Controls
 {
-	public partial class FormNewVNote : Form
+	public partial class FormAddVNote : Form
 	{
-		public FormNewVNote()
+		public FormAddVNote()
 		{
 			InitializeComponent();
 		}
-		VideosDto thisvideoDto;
-		private async void button1_Click(object sender, EventArgs e)
+		public FormHP ParentForm { get; set; }
+
+		private VideosDto thisvideoDto=null;
+
+		private async void btnChek_Click(object sender, EventArgs e)
 		{
 			string url = txtUrl.Text;
 			await showVideoDetailControl1.LoadVideo(url);
+			showVideoDetailControl1.Visible = true;
 			thisvideoDto = showVideoDetailControl1.VideoDto;
 		}
 
-		private void btnAddVideo_Click(object sender, EventArgs e)
+		private void btnAdd_Click(object sender, EventArgs e)
 		{
 			IVideosRepositiry videorepo = new SqlVideosRepository();
 			VideosService videoservice = new VideosService(videorepo);
 			IUserVideoNotesRepository uservnoterepo = new SqlUserVideoNotesRepository();
 			UserVideoNotesService userVNoteService = new UserVideoNotesService(uservnoterepo);
+			if (thisvideoDto == null)
+			{
+				MessageBox.Show("請先確實查詢到再加入！");
+				return;
+			}
+
+			int noteId = 0;
 			if (videoservice.Exists(thisvideoDto.VideoId))
 			{
 				if (userVNoteService.Exists(thisvideoDto.VideoId, FormLogin.userId))
 				{
 					MessageBox.Show("早就建了，幫你打開");
+					noteId = userVNoteService.GerNoteId(thisvideoDto.VideoId, FormLogin.userId);
+					ParentForm.LoadForm(new FormReadEditVNote(noteId));
 				}
 				else
 				{
-					int noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
+					noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
 					MessageBox.Show($"幫你建好了VNote, ID={noteId}");
+					ParentForm.LoadForm(new FormReadEditVNote(noteId));
 				}
 			}
 			else
 			{
 				videoservice.Create(thisvideoDto);
-				int noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
+				noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
 				MessageBox.Show($"幫你建好了VNote, ID={noteId}");
+				ParentForm.LoadForm(new FormReadEditVNote(noteId));
 			}
-
 		}
+
+		private void FormAddVNote_Load(object sender, EventArgs e)
+		{
+			
+		}
+
+
 	}
 }

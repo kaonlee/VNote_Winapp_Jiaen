@@ -8,8 +8,14 @@ namespace VNote.DataLayer.Cores
 {
 	public class UsersEntity
 	{
-        public int UserId { get; set; }
-		public string UserName { get; set; }
-		public string Password { get; set; }
+        public int UserId { get; private set; }
+		public string UserName { get; private set; }
+		public string Password { get; private set; }
+        public UsersEntity(int userId, string userName, string password)
+        {
+            this.UserId = userId;
+            this.Password = password;
+            this.UserName = userName;
+        }
     }
 }

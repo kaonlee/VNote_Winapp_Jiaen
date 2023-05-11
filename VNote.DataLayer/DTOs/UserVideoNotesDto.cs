@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Google.Apis.YouTube.v3.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,12 +18,30 @@ namespace VNote.DataLayer.DTOs
 		public string Tag { get; set; }
 		public bool IsFavorite { get; set; }
 		public bool IsNoteLater { get; set; }
-		public string VideoTitle { get; private set; }
-		public string ThumbnailUrl { get; private set; }
-		public DateTime? LiveStartedAt { get; private set; }
-		public string FormattedDuration { get; private set; }
+		public string VideoTitle { get; set; }
+		public string ThumbnailUrl { get; set; }
+		public DateTime? LiveStartedAt { get; set; }
+		public string FormattedDuration { get; set; }
+        public string ChannelName { get; set; }
         //public int SlicesCountter { get; set; }
     }
 
+	public static class UserVideoNotesDtoExtensions
+	{
+		public static UserVideoNotesEditDto toEditDto (this UserVideoNotesDto dto)
+		{
+			return new UserVideoNotesEditDto
+			{
+				UserVideoNoteID = dto.UserVideoNoteId,
+				IsFavorite = dto.IsFavorite,
+				IsNoteLater = dto.IsNoteLater,
+				VideoId = dto.VideoId,
+				LastEditAt = (DateTime?)dto.LastEditAt,
+				Note = dto.Note ?? string.Empty,
+				Tag = dto.Tag ?? string.Empty
+			};
+		}
+
+	}
 
 }

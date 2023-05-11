@@ -75,8 +75,7 @@ namespace VNote_Winapp_Jaien
 				labelVidoType.Text = (dto.IsStreamVideo) ? "直播影片" : "影片";
 				labelStartedTime.Text = dto.LiveStartedAt.ToString();
 				labelPublishedTime.Text=dto.PublishedAt.ToString();
-				string wrappedTitle = WrapText(dto.VideoTitle, 10, labelTitle.Font);
-				labelTitle.Text = wrappedTitle;
+				labelTitle.Text = dto.VideoTitle;
 			}
 			catch (Exception ex)
 			{
@@ -106,10 +105,9 @@ namespace VNote_Winapp_Jaien
 				labelChannelName.Text = dto.ChannelName;
 				labelDuration.Text = dto.DurationFormated;
 				labelVidoType.Text = (dto.IsStreamVideo) ? "直播影片" : "影片";
-				labelStartedTime.Text = dto.LiveStartedAt.ToString();
-				labelPublishedTime.Text = dto.PublishedAt.ToString();
-				string wrappedTitle = WrapText(dto.VideoTitle, 10, labelTitle.Font);
-				labelTitle.Text = wrappedTitle;
+				labelStartedTime.Text = $"Start: {dto.LiveStartedAt.ToString()}";
+				labelPublishedTime.Text = $"Published: {dto.PublishedAt.ToString()}";
+				labelTitle.Text = dto.VideoTitle;
 
 			}
 			catch (Exception ex)
@@ -124,6 +122,26 @@ namespace VNote_Winapp_Jaien
 		}
 
 		private void labelVidoType_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void ShowVideoDetailControl_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelStartedTime_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelPublishedTime_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void labelTitle_Click(object sender, EventArgs e)
 		{
 
 		}

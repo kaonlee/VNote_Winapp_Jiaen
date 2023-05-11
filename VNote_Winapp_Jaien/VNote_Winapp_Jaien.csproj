@@ -104,11 +104,53 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\FormNewVNote.cs">
+    <Compile Include="Controls\FormAddVNote.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\FormNewVNote.Designer.cs">
-      <DependentUpon>FormNewVNote.cs</DependentUpon>
+    <Compile Include="Controls\FormAddVNote.Designer.cs">
+      <DependentUpon>FormAddVNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormReadEditVNote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormReadEditVNote.Designer.cs">
+      <DependentUpon>FormReadEditVNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormReadVNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormReadVNotes.Designer.cs">
+      <DependentUpon>FormReadVNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormWelcome.Designer.cs">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\SearchVNotesList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\SearchVNotesList.Designer.cs">
+      <DependentUpon>SearchVNotesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowVideoDetailatVNote.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ShowVideoDetailatVNote.Designer.cs">
+      <DependentUpon>ShowVideoDetailatVNote.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShowVNoteControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ShowVNoteControl.Designer.cs">
+      <DependentUpon>ShowVNoteControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditAccount.Designer.cs">
+      <DependentUpon>FormEditAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHP.cs">
       <SubType>Form</SubType>
@@ -121,6 +163,12 @@
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSignUp.Designer.cs">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,14 +190,38 @@
     <Compile Include="Controls\ShowVideoDetailControl.Designer.cs">
       <DependentUpon>ShowVideoDetailControl.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Controls\FormNewVNote.resx">
-      <DependentUpon>FormNewVNote.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\FormAddVNote.resx">
+      <DependentUpon>FormAddVNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormReadEditVNote.resx">
+      <DependentUpon>FormReadEditVNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormReadVNotes.resx">
+      <DependentUpon>FormReadVNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormWelcome.resx">
+      <DependentUpon>FormWelcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SearchVNotesList.resx">
+      <DependentUpon>SearchVNotesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ShowVideoDetailatVNote.resx">
+      <DependentUpon>ShowVideoDetailatVNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ShowVNoteControl.resx">
+      <DependentUpon>ShowVNoteControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditAccount.resx">
+      <DependentUpon>FormEditAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHP.resx">
       <DependentUpon>FormHP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSignUp.resx">
+      <DependentUpon>FormSignUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -159,6 +231,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Controls\SearchVideoList.resx">
       <DependentUpon>SearchVideoList.cs</DependentUpon>
@@ -192,6 +265,15 @@
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messageImage_1683828638056.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_sign_tablet_hand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messageImage_1683829976698.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -17,15 +17,17 @@ namespace VNote.DataLayer.Cores
         public bool IsFavorite { get; set; }
         public bool IsNoteLater { get; set; }
 
-        public UserVideoNotesEntity(int userVideoNoteId, int userID, DateTime? lastEditAt, string videoId, string note, string tag)
-        {
+        public UserVideoNotesEntity(int userVideoNoteId, int userID, DateTime? lastEditAt, string videoId, string note, string tag, bool isFavorite, bool isNoteLate)
+		{
             this.UserVideoNoteId = userVideoNoteId;
 			this.UserID = userID;
             this.LastEditAt = lastEditAt;
             this.VideoId = videoId;
             this.LastEditAt = lastEditAt.Value;
             this.Note = note;
-            this.Tag = tag;            
+            this.Tag = tag;     
+            this.IsFavorite = isFavorite;
+            this.IsNoteLater = isNoteLate;
         }
     }
 }

@@ -35,5 +35,21 @@ namespace VNote.DataLayer.DTOs
 		{
 			return new VideosEntity(dto.VideoId, dto.VideoTitle, dto.ThumbnailUrl, dto.ChannelId, dto.ChannelName, dto.IsStreamVideo, dto.LiveStartedAt, dto.PublishedAt, dto.DurationSecond);
 		}
+
+		public static VideosDto toDto(this VideosEntity entity)
+		{
+			return new VideosDto
+			{
+				VideoId = entity.VideoId,
+				VideoTitle = entity.VideoTitle,
+				ThumbnailUrl = entity.ThumbnailUrl,
+				ChannelId = entity.ChannelId,
+				ChannelName = entity.ChannelTitle,
+				IsStreamVideo = entity.IsStreamVideo,
+				LiveStartedAt = entity.LiveStartedAt,
+				PublishedAt = entity.PublishedAt,
+				DurationSecond = entity.DurationSecond
+			};
+		}
 	}
 }

@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VNote.DataLayer.Cores;
+using VNote.DataLayer.DTOs;
 
 namespace VNote.DataLayer.Interface
 {
 	public interface IUsersRepository
 	{
-		User GetByAccount (string account);
-		User Get (int userId); // Edit
+		UsersDto GetByAccount (string account);
+		UsersDto Get (int userId); // Edit
 		void Insert (string userName,  string password);
-	}
-	public class User
-	{
-		public int UserId { get; set; }
-		public string UserName { get; set; }
-		public string Password { get; set; }
+		void Update (UsersEntity entity);
+		bool Exists(string userName, string userPassword);
+		bool Exists(string userName);
+		int GetUserId (string userName);
 	}
 }

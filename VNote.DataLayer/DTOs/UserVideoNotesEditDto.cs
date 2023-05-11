@@ -23,7 +23,7 @@ namespace VNote.DataLayer.DTOs
 	{
 		public static UserVideoNotesEntity toEntity(this UserVideoNotesEditDto dto)
 		{
-			return new UserVideoNotesEntity(dto.UserVideoNoteID, dto.UserVideoNoteID, dto.LastEditAt, dto.VideoId, dto.Note, dto.Tag);
+			return new UserVideoNotesEntity(dto.UserVideoNoteID, dto.UserVideoNoteID, dto.LastEditAt, dto.VideoId, dto.Note, dto.Tag, dto.IsFavorite, dto.IsNoteLater);
 		}
 
 	}

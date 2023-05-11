@@ -21,7 +21,7 @@ namespace VNote_Winapp_Jaien
 			InitializeComponent();
 		}
 
-		private void LoadForm(Form form)
+		public void LoadForm(Form form)
 		{
 			if (currentForm != null)
 			{
@@ -32,14 +32,16 @@ namespace VNote_Winapp_Jaien
 			currentForm.TopLevel = false;
 			currentForm.FormBorderStyle = FormBorderStyle.None;
 			currentForm.Dock = DockStyle.Fill;
-			currentForm.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+			currentForm.Anchor = AnchorStyles.Top | AnchorStyles.Left;
 			panelMain.Controls.Add(currentForm);
 			currentForm.Show();
 		}
 
 		private void btnNewVNote_Click(object sender, EventArgs e)
 		{
-			LoadForm(new FormNewVNote());
+			FormAddVNote formAddVNote = new FormAddVNote();
+			formAddVNote.ParentForm = this;
+			LoadForm(formAddVNote);
 		}
 
 		private void btnLogOut_Click(object sender, EventArgs e)
@@ -55,6 +57,49 @@ namespace VNote_Winapp_Jaien
 				// 如果是使用者點擊 FormHP 的關閉按鈕，並且沒有按下登出按鈕，則關閉整個應用程式
 				Application.Exit();
 			}
+		}
+
+		private void panelTop_Paint(object sender, PaintEventArgs e)
+		{
+
+		}
+
+		private void FormHP_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnVNotesList_Click(object sender, EventArgs e)
+		{
+			FormReadVNotes formeadVNotes = new FormReadVNotes();
+			formeadVNotes.ParentForm = this;
+			LoadForm(formeadVNotes);
+		}
+
+		private void btnNoteLatter_Click(object sender, EventArgs e)
+		{
+			FormReadVNotes formeadVNotes = new FormReadVNotes(true);
+			formeadVNotes.ParentForm = this;
+			LoadForm(formeadVNotes);
+		}
+
+		private void btnFavorite_Click(object sender, EventArgs e)
+		{
+			FormReadVNotes formeadVNotes = new FormReadVNotes(false,true);
+			formeadVNotes.ParentForm = this;
+			LoadForm(formeadVNotes);
+		}
+
+		private void button7_Click(object sender, EventArgs e)
+		{
+			var frm = new FormEditAccount(FormLogin.userId);
+			frm.ShowDialog();
+		}
+
+		private void btnLogOut_Click_1(object sender, EventArgs e)
+		{
+			isLoggingOut = true;
+			this.Close();
 		}
 	}
 }

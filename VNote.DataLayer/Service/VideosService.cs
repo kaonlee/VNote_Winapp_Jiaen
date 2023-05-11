@@ -21,7 +21,7 @@ namespace VNote.DataLayer.Service
 
         public void Create (VideosDto dto)
         {
-            if (!Exists(dto.VideoId))   
+            if (!Exists(dto.VideoId) && dto.VideoTitle!=null)   
             {
                 VideosEntity entity = dto.toEntity();
                 _repo.Create(entity);
@@ -29,7 +29,14 @@ namespace VNote.DataLayer.Service
             return;
 	    }
 
+
 		public bool Exists(string videoId)
             => _repo.Exists(videoId);
+
+        public VideosDto Get (string videoId)
+        {
+			VideosEntity entity = _repo.Get(videoId);
+            return entity.toDto();
+        }
 	}
 }

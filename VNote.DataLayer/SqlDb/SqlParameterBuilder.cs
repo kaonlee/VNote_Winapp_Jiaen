@@ -44,6 +44,8 @@ namespace VNote.DataLayer.SqlDb
 			return this;
 		}
 
+
+
 		public SqlParameterBuilder AddVarchar(string name, int length, string value)
 		{
 			var parameter = string.IsNullOrEmpty(value)
@@ -74,6 +76,16 @@ namespace VNote.DataLayer.SqlDb
 			var parameter = new SqlParameter(name, SqlDbType.DateTime);
 			parameter.Value = (object)value ?? DBNull.Value;
 			_paramerter.Add(parameter);
+			return this;
+		}
+
+		public SqlParameterBuilder AddNvarcharNotNull(string name, int length, string value)
+		{
+			var parameter = string.IsNullOrEmpty(value)
+				? new SqlParameter(name, SqlDbType.NVarChar, length) { Value = "" }
+				: new SqlParameter(name, SqlDbType.NVarChar, length) { Value = value };
+			_paramerter.Add(parameter);
+
 			return this;
 		}
 

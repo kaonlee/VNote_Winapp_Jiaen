@@ -14,18 +14,19 @@ namespace VNote.DataLayer.Interface
 		int Create(int userId, string videoId);
 		void Update(UserVideoNotesEntity entity);
 		void Delete(int userVideoNoteId);
-		UserVideoNotesDto Get(string userVideoNoteId);
+		UserVideoNotesDto Get(int userVideoNoteId);
 		List<UserVideoNotesDto> Search(UserVideoNoteSearchCriteria searchCriteria);
 		bool Exists(string videoId, int userId);
+		int GetNoteId (string videoId, int userId);
+
 	}
 	public class UserVideoNoteSearchCriteria
 	{
+		public int UserId { get; set; }
 		public string Keyword { get; set; }
-		public string VideoTitle { get; set; }
-		public string VideoId { get; set; }
-		public int? UserId { get; set; }
+		public string Tag { get; set; }
 		public bool? IsFavorite { get; set; }
-		public bool? IsNoteLatter { get; set; }
+		public bool? IsNoteLater { get; set; }
 	
 	}
 }

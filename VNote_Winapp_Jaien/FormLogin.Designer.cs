@@ -35,17 +35,19 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.btnLogin = new System.Windows.Forms.Button();
 			this.btnSignUp = new System.Windows.Forms.Button();
-			this.groupBox1 = new System.Windows.Forms.GroupBox();
+			this.Login = new System.Windows.Forms.GroupBox();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			this.groupBox1.SuspendLayout();
+			this.Login.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(30, 159);
+			this.pictureBox1.Image = global::VNote_Winapp_Jaien.Properties.Resources.messageImage_1683828638056;
+			this.pictureBox1.Location = new System.Drawing.Point(51, 149);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(345, 230);
+			this.pictureBox1.Size = new System.Drawing.Size(345, 255);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -72,6 +74,7 @@
 			this.txtPassword.Location = new System.Drawing.Point(52, 121);
 			this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
 			this.txtPassword.Name = "txtPassword";
+			this.txtPassword.PasswordChar = '×';
 			this.txtPassword.Size = new System.Drawing.Size(225, 28);
 			this.txtPassword.TabIndex = 1;
 			// 
@@ -105,27 +108,30 @@
 			this.btnSignUp.TabIndex = 3;
 			this.btnSignUp.Text = "Sign Up";
 			this.btnSignUp.UseVisualStyleBackColor = true;
+			this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
 			// 
-			// groupBox1
+			// Login
 			// 
-			this.groupBox1.Controls.Add(this.txtUserName);
-			this.groupBox1.Controls.Add(this.btnSignUp);
-			this.groupBox1.Controls.Add(this.txtPassword);
-			this.groupBox1.Controls.Add(this.btnLogin);
-			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Controls.Add(this.label2);
-			this.groupBox1.Location = new System.Drawing.Point(401, 159);
-			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(346, 234);
-			this.groupBox1.TabIndex = 4;
-			this.groupBox1.TabStop = false;
+			this.Login.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.Login.Controls.Add(this.txtUserName);
+			this.Login.Controls.Add(this.btnSignUp);
+			this.Login.Controls.Add(this.txtPassword);
+			this.Login.Controls.Add(this.btnLogin);
+			this.Login.Controls.Add(this.label1);
+			this.Login.Controls.Add(this.label2);
+			this.Login.Location = new System.Drawing.Point(401, 159);
+			this.Login.Name = "Login";
+			this.Login.Size = new System.Drawing.Size(346, 234);
+			this.Login.TabIndex = 4;
+			this.Login.TabStop = false;
 			// 
 			// FormLogin
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+			this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.ClientSize = new System.Drawing.Size(784, 561);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.Login);
 			this.Controls.Add(this.pictureBox1);
 			this.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(2);
@@ -135,8 +141,8 @@
 			this.Text = "FormLogin";
 			this.Load += new System.EventHandler(this.FormLogin_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			this.groupBox1.ResumeLayout(false);
-			this.groupBox1.PerformLayout();
+			this.Login.ResumeLayout(false);
+			this.Login.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -150,6 +156,6 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnLogin;
 		private System.Windows.Forms.Button btnSignUp;
-		private System.Windows.Forms.GroupBox groupBox1;
+		private System.Windows.Forms.GroupBox Login;
 	}
 }

@@ -81,5 +81,4 @@ namespace VNote.DataLayer.Infra.MemoryRepository
 		}
 	}
 
-
 }

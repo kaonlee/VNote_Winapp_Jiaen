@@ -47,7 +47,6 @@ namespace VNote_Winapp_Jaien.Controls
 					MessageBox.Show(ex.Message, "錯誤", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 				labelChannelName.Text = dto.ChannelName;
-				labelStartedTime.Text = dto.LiveStartedAt.ToString();
 				labelPublishedTime.Text = dto.PublishedAt.ToString();
 				labelTitle.Text = dto.VideoTitle;
 
@@ -87,6 +86,16 @@ namespace VNote_Winapp_Jaien.Controls
 		{
 			string url = $"https://www.youtube.com/watch?v={_dto.VideoId}";
 			Process.Start(url);
+		}
+
+		private void labelPublishedTime_Click ( object sender, EventArgs e )
+		{
+
+		}
+
+		private void labelChannelName_Click ( object sender, EventArgs e )
+		{
+
 		}
 	}
 }

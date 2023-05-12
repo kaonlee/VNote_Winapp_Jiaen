@@ -35,16 +35,17 @@
 			// 
 			this.searchVNotesList1.AllowDrop = true;
 			this.searchVNotesList1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.searchVNotesList1.Location = new System.Drawing.Point(12, 12);
+			this.searchVNotesList1.Location = new System.Drawing.Point(21, 26);
 			this.searchVNotesList1.Name = "searchVNotesList1";
-			this.searchVNotesList1.Size = new System.Drawing.Size(849, 554);
+			this.searchVNotesList1.Size = new System.Drawing.Size(849, 511);
 			this.searchVNotesList1.TabIndex = 0;
 			// 
 			// FormReadVNotes
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1035, 620);
+			this.BackColor = System.Drawing.Color.White;
+			this.ClientSize = new System.Drawing.Size(1035, 572);
 			this.Controls.Add(this.searchVNotesList1);
 			this.Name = "FormReadVNotes";
 			this.Text = "ReadVNotes";

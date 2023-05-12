@@ -57,7 +57,7 @@
 			this.txtUserName.Margin = new System.Windows.Forms.Padding(2);
 			this.txtUserName.Name = "txtUserName";
 			this.txtUserName.Size = new System.Drawing.Size(225, 28);
-			this.txtUserName.TabIndex = 1;
+			this.txtUserName.TabIndex = 0;
 			// 
 			// label1
 			// 
@@ -94,7 +94,7 @@
 			this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
 			this.btnLogin.Name = "btnLogin";
 			this.btnLogin.Size = new System.Drawing.Size(78, 42);
-			this.btnLogin.TabIndex = 3;
+			this.btnLogin.TabIndex = 2;
 			this.btnLogin.Text = "Login";
 			this.btnLogin.UseVisualStyleBackColor = true;
 			this.btnLogin.Click += new System.EventHandler(this.button1_Click);
@@ -122,7 +122,7 @@
 			this.Login.Location = new System.Drawing.Point(401, 159);
 			this.Login.Name = "Login";
 			this.Login.Size = new System.Drawing.Size(346, 234);
-			this.Login.TabIndex = 4;
+			this.Login.TabIndex = 0;
 			this.Login.TabStop = false;
 			// 
 			// FormLogin

@@ -122,14 +122,14 @@
 			this.txtNote.Location = new System.Drawing.Point(33, 48);
 			this.txtNote.Multiline = true;
 			this.txtNote.Name = "txtNote";
-			this.txtNote.Size = new System.Drawing.Size(655, 367);
+			this.txtNote.Size = new System.Drawing.Size(690, 367);
 			this.txtNote.TabIndex = 4;
 			// 
 			// panel1
 			// 
 			this.panel1.Controls.Add(this.panel3);
 			this.panel1.Controls.Add(this.panel2);
-			this.panel1.Location = new System.Drawing.Point(0, 414);
+			this.panel1.Location = new System.Drawing.Point(0, 430);
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(723, 87);
 			this.panel1.TabIndex = 5;
@@ -198,10 +198,9 @@
 			this.Controls.Add(this.Note);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Margin = new System.Windows.Forms.Padding(4);
-			this.MaximumSize = new System.Drawing.Size(723, 523);
 			this.MinimumSize = new System.Drawing.Size(723, 523);
 			this.Name = "ShowVNoteControl";
-			this.Size = new System.Drawing.Size(723, 523);
+			this.Size = new System.Drawing.Size(751, 532);
 			this.Load += new System.EventHandler(this.ShowVNoteControl_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel3.ResumeLayout(false);

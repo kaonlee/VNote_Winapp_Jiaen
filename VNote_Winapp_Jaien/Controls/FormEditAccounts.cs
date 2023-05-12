@@ -35,6 +35,7 @@ namespace VNote_Winapp_Jaien.Controls
 			var frm = new FormEditAccount(userId);
 			frm.ShowDialog();
 			frm.Owner = this;
+			Display();
 		}
 
 		public void Display()

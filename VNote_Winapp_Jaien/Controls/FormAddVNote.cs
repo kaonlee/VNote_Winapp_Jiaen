@@ -28,8 +28,8 @@ namespace VNote_Winapp_Jaien.Controls
 		{
 			string url = txtUrl.Text;
 			await showVideoDetailControl1.LoadVideo(url);
-			showVideoDetailControl1.Visible = true;
 			thisvideoDto = showVideoDetailControl1.VideoDto;
+			showVideoDetailControl1.Visible = ( thisvideoDto == null ) ? false : true;
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)
@@ -56,7 +56,7 @@ namespace VNote_Winapp_Jaien.Controls
 				else
 				{
 					noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
-					MessageBox.Show($"幫你建好了VNote, ID={noteId}");
+					MessageBox.Show($"完成建立你的 VNote!");
 					ParentForm.LoadForm(new FormReadEditVNote(noteId));
 				}
 			}
@@ -64,7 +64,7 @@ namespace VNote_Winapp_Jaien.Controls
 			{
 				videoservice.Create(thisvideoDto);
 				noteId = userVNoteService.Create(thisvideoDto.VideoId, FormLogin.userId);
-				MessageBox.Show($"幫你建好了VNote, ID={noteId}");
+				MessageBox.Show($"完成建立你的 VNote!");
 				ParentForm.LoadForm(new FormReadEditVNote(noteId));
 			}
 		}

@@ -61,6 +61,7 @@ namespace VNote_Winapp_Jaien.Controls
 			UserVideoNotesService service = new UserVideoNotesService(repo);
 			var result = service.Serarch(_criteria);
 			_notes = result.ToList();
+			_notes = _notes.OrderByDescending(n => n.LastEditAt).ToList();
 
 			//設定 DataSource
 			dataGridView1.DataSource = _notes;
@@ -70,7 +71,8 @@ namespace VNote_Winapp_Jaien.Controls
 			dataGridView1.Columns["UserId"].Visible = false;
 			dataGridView1.Columns["UserVideoNoteId"].Visible = false;
 			dataGridView1.Columns["ThumbnailUrl"].Visible = false;
-			
+			dataGridView1.Columns["LiveStartedAt"].Visible = false;
+
 			// 設定顯示順序
 			dataGridView1.Columns["Thumbnail"].DisplayIndex = 0;
 			dataGridView1.Columns["VideoTitle"].DisplayIndex = 1;
@@ -78,9 +80,9 @@ namespace VNote_Winapp_Jaien.Controls
 			dataGridView1.Columns["IsFavorite"].DisplayIndex = 3;
 			dataGridView1.Columns["IsNoteLater"].DisplayIndex = 4;
 			dataGridView1.Columns["Tag"].DisplayIndex = 5;
-			dataGridView1.Columns["LastEditAt"].DisplayIndex = 6;
-			dataGridView1.Columns["ThumbnailUrl"].DisplayIndex = 7;
-			dataGridView1.Columns["FormattedDuration"].DisplayIndex = 8;
+			dataGridView1.Columns["ThumbnailUrl"].DisplayIndex = 6;
+			dataGridView1.Columns["FormattedDuration"].DisplayIndex = 7;
+			dataGridView1.Columns["LastEditAt"].DisplayIndex = 8;
 
 		}
 
@@ -160,6 +162,15 @@ namespace VNote_Winapp_Jaien.Controls
 					frmHP.LoadForm(new FormReadEditVNote(noteid));
 				}
 			}
+		}
+
+		private void panel1_Paint ( object sender, PaintEventArgs e )
+		{
+
+		}
+
+		private void OrderTitle_Click ( object sender, EventArgs e )
+		{
 		}
 	}
 }

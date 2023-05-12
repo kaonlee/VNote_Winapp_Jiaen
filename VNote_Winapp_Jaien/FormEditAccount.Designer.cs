@@ -41,60 +41,60 @@
 			// 
 			// txtPwCheck
 			// 
-			this.txtPwCheck.Location = new System.Drawing.Point(58, 160);
+			this.txtPwCheck.Location = new System.Drawing.Point(58, 148);
 			this.txtPwCheck.Name = "txtPwCheck";
 			this.txtPwCheck.PasswordChar = '×';
-			this.txtPwCheck.Size = new System.Drawing.Size(200, 20);
+			this.txtPwCheck.Size = new System.Drawing.Size(200, 22);
 			this.txtPwCheck.TabIndex = 9;
 			// 
 			// txtPassword
 			// 
-			this.txtPassword.Location = new System.Drawing.Point(58, 134);
+			this.txtPassword.Location = new System.Drawing.Point(58, 124);
 			this.txtPassword.Name = "txtPassword";
 			this.txtPassword.PasswordChar = '×';
-			this.txtPassword.Size = new System.Drawing.Size(200, 20);
+			this.txtPassword.Size = new System.Drawing.Size(200, 22);
 			this.txtPassword.TabIndex = 5;
 			// 
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(55, 186);
+			this.label3.Location = new System.Drawing.Point(191, 173);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(72, 13);
+			this.label3.Size = new System.Drawing.Size(67, 12);
 			this.label3.TabIndex = 6;
 			this.label3.Text = "check again !";
 			// 
 			// txtUserName
 			// 
-			this.txtUserName.Location = new System.Drawing.Point(58, 64);
+			this.txtUserName.Location = new System.Drawing.Point(58, 59);
 			this.txtUserName.Name = "txtUserName";
-			this.txtUserName.Size = new System.Drawing.Size(200, 20);
+			this.txtUserName.Size = new System.Drawing.Size(200, 22);
 			this.txtUserName.TabIndex = 4;
 			this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
 			// 
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(41, 108);
+			this.label2.Location = new System.Drawing.Point(41, 100);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 13);
+			this.label2.Size = new System.Drawing.Size(48, 12);
 			this.label2.TabIndex = 7;
 			this.label2.Text = "Password";
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(41, 38);
+			this.label1.Location = new System.Drawing.Point(41, 35);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(57, 13);
+			this.label1.Size = new System.Drawing.Size(53, 12);
 			this.label1.TabIndex = 8;
 			this.label1.Text = "UserName";
 			// 
 			// btnEdit
 			// 
-			this.btnEdit.Location = new System.Drawing.Point(44, 239);
+			this.btnEdit.Location = new System.Drawing.Point(44, 221);
 			this.btnEdit.Name = "btnEdit";
-			this.btnEdit.Size = new System.Drawing.Size(135, 43);
+			this.btnEdit.Size = new System.Drawing.Size(135, 40);
 			this.btnEdit.TabIndex = 10;
 			this.btnEdit.Text = "Edit !";
 			this.btnEdit.UseVisualStyleBackColor = true;
@@ -103,19 +103,19 @@
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = global::VNote_Winapp_Jaien.Properties.Resources.shopping_sign_tablet_hand;
-			this.pictureBox1.Location = new System.Drawing.Point(205, 239);
+			this.pictureBox1.Location = new System.Drawing.Point(205, 221);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(97, 95);
+			this.pictureBox1.Size = new System.Drawing.Size(97, 88);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 11;
 			this.pictureBox1.TabStop = false;
 			// 
 			// FormEditAccount
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.ClientSize = new System.Drawing.Size(342, 373);
+			this.ClientSize = new System.Drawing.Size(342, 344);
 			this.Controls.Add(this.txtPwCheck);
 			this.Controls.Add(this.txtPassword);
 			this.Controls.Add(this.label3);

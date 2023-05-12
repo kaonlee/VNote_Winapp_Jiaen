@@ -51,6 +51,7 @@ namespace VNote_Winapp_Jaien
 				};
 				service.Update(newDto);
 				MessageBox.Show("完成修改！");
+
 			}catch(Exception ex)
 			{
 				MessageBox.Show(ex.Message);

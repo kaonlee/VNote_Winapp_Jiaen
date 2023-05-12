@@ -30,7 +30,10 @@ namespace VNote.DataLayer.Service
 				throw new Exception($@"Username 【{username}】 已經被使用，
 請換一個或想想看你的密碼！");
 			}
+			else
+			{
 			_repo.Insert (username, password);
+			}
 		}
 
 		public int GetUserId (string username)
@@ -54,5 +57,7 @@ namespace VNote.DataLayer.Service
 			UsersEntity entity = newDto.toEntity();
 			_repo.Update(entity);
 		}
+
+		public List<UsersDto> GetAll() { return _repo.GetAll(); }
 	}
 }

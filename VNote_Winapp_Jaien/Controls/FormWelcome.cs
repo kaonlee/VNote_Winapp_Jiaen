@@ -16,5 +16,13 @@ namespace VNote_Winapp_Jaien.Controls
 		{
 			InitializeComponent();
 		}
+		public FormHP ParentForm
+		{
+			get; set;
+		}
+		private void FormWelcome_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

@@ -12,6 +12,7 @@ namespace VNote.DataLayer.Interface
 	{
 		UsersDto GetByAccount (string account);
 		UsersDto Get (int userId); // Edit
+		List<UsersDto> GetAll ();
 		void Insert (string userName,  string password);
 		void Update (UsersEntity entity);
 		bool Exists(string userName, string userPassword);

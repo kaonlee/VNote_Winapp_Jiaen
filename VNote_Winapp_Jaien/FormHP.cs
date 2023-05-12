@@ -67,6 +67,20 @@ namespace VNote_Winapp_Jaien
 		private void FormHP_Load(object sender, EventArgs e)
 		{
 
+			if (FormLogin.userId == 1)
+			{
+				button1.Visible = true;
+				button1.Enabled = true;
+			}
+			else
+			{
+				button1.Visible = false;
+				button1.Enabled = false;
+			}
+
+			FormWelcome formWelcome = new FormWelcome();
+			formWelcome.ParentForm = this;
+			LoadForm(formWelcome);
 		}
 
 		private void btnVNotesList_Click(object sender, EventArgs e)
@@ -100,6 +114,20 @@ namespace VNote_Winapp_Jaien
 		{
 			isLoggingOut = true;
 			this.Close();
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			FormEditAccounts formEditAccounts = new FormEditAccounts();
+			formEditAccounts.ParentForm = this;
+			LoadForm(formEditAccounts);
+		}
+
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			FormWelcome formWelcome = new FormWelcome();
+			formWelcome.ParentForm = this;
+			LoadForm(formWelcome);
 		}
 	}
 }

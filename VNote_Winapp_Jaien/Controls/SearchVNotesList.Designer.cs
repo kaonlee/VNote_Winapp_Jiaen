@@ -36,17 +36,17 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.panel1 = new System.Windows.Forms.Panel();
+			this.panel2 = new System.Windows.Forms.Panel();
 			this.Thumbnail = new System.Windows.Forms.DataGridViewImageColumn();
 			this.VideoTitle = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ChannelName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.IsFavorite = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-			this.NoteLater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.IsNoteLater = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.LastEditAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ThumbnailUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.FormattedDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.panel1 = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -124,6 +124,7 @@
 			this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
 			this.dataGridView1.AllowUserToAddRows = false;
 			this.dataGridView1.AllowUserToDeleteRows = false;
+			this.dataGridView1.AllowUserToOrderColumns = true;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Thumbnail,
@@ -131,7 +132,7 @@
             this.Tag,
             this.ChannelName,
             this.IsFavorite,
-            this.NoteLater,
+            this.IsNoteLater,
             this.LastEditAt,
             this.ThumbnailUrl,
             this.FormattedDuration});
@@ -143,6 +144,31 @@
 			this.dataGridView1.TabIndex = 0;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+			// 
+			// panel1
+			// 
+			this.panel1.AllowDrop = true;
+			this.panel1.Controls.Add(this.txtTag);
+			this.panel1.Controls.Add(this.label2);
+			this.panel1.Controls.Add(this.button1);
+			this.panel1.Controls.Add(this.label1);
+			this.panel1.Controls.Add(this.checkBoxLater);
+			this.panel1.Controls.Add(this.checkBoxFav);
+			this.panel1.Controls.Add(this.txtKeyword);
+			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+			this.panel1.Location = new System.Drawing.Point(0, 0);
+			this.panel1.Name = "panel1";
+			this.panel1.Size = new System.Drawing.Size(905, 73);
+			this.panel1.TabIndex = 5;
+			// 
+			// panel2
+			// 
+			this.panel2.Controls.Add(this.dataGridView1);
+			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panel2.Location = new System.Drawing.Point(0, 73);
+			this.panel2.Name = "panel2";
+			this.panel2.Size = new System.Drawing.Size(905, 486);
+			this.panel2.TabIndex = 6;
 			// 
 			// Thumbnail
 			// 
@@ -192,16 +218,16 @@
 			this.IsFavorite.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
 			this.IsFavorite.Width = 80;
 			// 
-			// NoteLater
+			// IsNoteLater
 			// 
-			this.NoteLater.DataPropertyName = "IsNoteLater ";
-			this.NoteLater.FillWeight = 50F;
-			this.NoteLater.HeaderText = "Note Later";
-			this.NoteLater.Name = "NoteLater";
-			this.NoteLater.ReadOnly = true;
-			this.NoteLater.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-			this.NoteLater.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-			this.NoteLater.Width = 80;
+			this.IsNoteLater.DataPropertyName = "IsNoteLater";
+			this.IsNoteLater.FillWeight = 50F;
+			this.IsNoteLater.HeaderText = "Note Later";
+			this.IsNoteLater.Name = "IsNoteLater";
+			this.IsNoteLater.ReadOnly = true;
+			this.IsNoteLater.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+			this.IsNoteLater.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.IsNoteLater.Width = 80;
 			// 
 			// LastEditAt
 			// 
@@ -227,31 +253,6 @@
 			this.FormattedDuration.Name = "FormattedDuration";
 			this.FormattedDuration.ReadOnly = true;
 			this.FormattedDuration.Width = 80;
-			// 
-			// panel1
-			// 
-			this.panel1.AllowDrop = true;
-			this.panel1.Controls.Add(this.txtTag);
-			this.panel1.Controls.Add(this.label2);
-			this.panel1.Controls.Add(this.button1);
-			this.panel1.Controls.Add(this.label1);
-			this.panel1.Controls.Add(this.checkBoxLater);
-			this.panel1.Controls.Add(this.checkBoxFav);
-			this.panel1.Controls.Add(this.txtKeyword);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(905, 73);
-			this.panel1.TabIndex = 5;
-			// 
-			// panel2
-			// 
-			this.panel2.Controls.Add(this.dataGridView1);
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.panel2.Location = new System.Drawing.Point(0, 73);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(905, 486);
-			this.panel2.TabIndex = 6;
 			// 
 			// SearchVNotesList
 			// 
@@ -279,16 +280,16 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.DataGridView dataGridView1;
+		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel panel2;
 		private System.Windows.Forms.DataGridViewImageColumn Thumbnail;
 		private System.Windows.Forms.DataGridViewTextBoxColumn VideoTitle;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Tag;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ChannelName;
 		private System.Windows.Forms.DataGridViewCheckBoxColumn IsFavorite;
-		private System.Windows.Forms.DataGridViewCheckBoxColumn NoteLater;
+		private System.Windows.Forms.DataGridViewCheckBoxColumn IsNoteLater;
 		private System.Windows.Forms.DataGridViewTextBoxColumn LastEditAt;
 		private System.Windows.Forms.DataGridViewTextBoxColumn ThumbnailUrl;
 		private System.Windows.Forms.DataGridViewTextBoxColumn FormattedDuration;
-		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel panel2;
 	}
 }

@@ -29,20 +29,22 @@
 		private void InitializeComponent()
 		{
 			this.panelMenu = new System.Windows.Forms.Panel();
+			this.button7 = new System.Windows.Forms.Button();
+			this.btnLogOut = new System.Windows.Forms.Button();
 			this.btnFavorite = new System.Windows.Forms.Button();
 			this.btnNoteLatter = new System.Windows.Forms.Button();
 			this.btnVNotesList = new System.Windows.Forms.Button();
 			this.btnNewVNote = new System.Windows.Forms.Button();
 			this.panelMain = new System.Windows.Forms.Panel();
+			this.button1 = new System.Windows.Forms.Button();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnLogOut = new System.Windows.Forms.Button();
-			this.button7 = new System.Windows.Forms.Button();
 			this.panelMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// panelMenu
 			// 
+			this.panelMenu.Controls.Add(this.button1);
 			this.panelMenu.Controls.Add(this.button7);
 			this.panelMenu.Controls.Add(this.btnLogOut);
 			this.panelMenu.Controls.Add(this.btnFavorite);
@@ -55,6 +57,34 @@
 			this.panelMenu.Name = "panelMenu";
 			this.panelMenu.Size = new System.Drawing.Size(120, 661);
 			this.panelMenu.TabIndex = 0;
+			// 
+			// button7
+			// 
+			this.button7.BackColor = System.Drawing.Color.Snow;
+			this.button7.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button7.ForeColor = System.Drawing.Color.CadetBlue;
+			this.button7.Location = new System.Drawing.Point(0, 546);
+			this.button7.Name = "button7";
+			this.button7.Size = new System.Drawing.Size(120, 62);
+			this.button7.TabIndex = 9;
+			this.button7.Text = "Edit Account";
+			this.button7.UseVisualStyleBackColor = false;
+			this.button7.Click += new System.EventHandler(this.button7_Click);
+			// 
+			// btnLogOut
+			// 
+			this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+			this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnLogOut.ForeColor = System.Drawing.Color.MediumSlateBlue;
+			this.btnLogOut.Location = new System.Drawing.Point(0, 608);
+			this.btnLogOut.Name = "btnLogOut";
+			this.btnLogOut.Size = new System.Drawing.Size(120, 53);
+			this.btnLogOut.TabIndex = 8;
+			this.btnLogOut.Text = "Logout";
+			this.btnLogOut.UseVisualStyleBackColor = false;
+			this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
 			// 
 			// btnFavorite
 			// 
@@ -120,6 +150,20 @@
 			this.panelMain.Size = new System.Drawing.Size(884, 661);
 			this.panelMain.TabIndex = 2;
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.Snow;
+			this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.ForeColor = System.Drawing.Color.RosyBrown;
+			this.button1.Location = new System.Drawing.Point(0, 484);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(120, 62);
+			this.button1.TabIndex = 10;
+			this.button1.Text = "Edit Accounts";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -130,34 +174,7 @@
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 0;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnLogOut
-			// 
-			this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-			this.btnLogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnLogOut.ForeColor = System.Drawing.Color.MediumSlateBlue;
-			this.btnLogOut.Location = new System.Drawing.Point(0, 608);
-			this.btnLogOut.Name = "btnLogOut";
-			this.btnLogOut.Size = new System.Drawing.Size(120, 53);
-			this.btnLogOut.TabIndex = 8;
-			this.btnLogOut.Text = "Logout";
-			this.btnLogOut.UseVisualStyleBackColor = false;
-			this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click_1);
-			// 
-			// button7
-			// 
-			this.button7.BackColor = System.Drawing.Color.Snow;
-			this.button7.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button7.ForeColor = System.Drawing.Color.CadetBlue;
-			this.button7.Location = new System.Drawing.Point(0, 546);
-			this.button7.Name = "button7";
-			this.button7.Size = new System.Drawing.Size(120, 62);
-			this.button7.TabIndex = 9;
-			this.button7.Text = "Edit Account";
-			this.button7.UseVisualStyleBackColor = false;
-			this.button7.Click += new System.EventHandler(this.button7_Click);
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
 			// FormHP
 			// 
@@ -190,5 +207,6 @@
 		private System.Windows.Forms.Button btnFavorite;
 		private System.Windows.Forms.Button button7;
 		private System.Windows.Forms.Button btnLogOut;
+		private System.Windows.Forms.Button button1;
 	}
 }

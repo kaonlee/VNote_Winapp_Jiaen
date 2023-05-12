@@ -106,6 +106,22 @@ namespace VNote.DataLayer.Infra.SqlRepository
 			return userId;
 		}
 
+		public List<UsersDto> GetAll()
+		{
+			string sql = "SELECT * FROM Users";
+
+			Func<SqlDataReader, UsersDto> funcAssembler = reader =>
+			{
+				return new UsersDto
+				{
+					UserId = reader.GetInt32("UserId", 0),
+					UserName = reader.GetString("Username"),
+					Password = reader.GetString("Password")
+				};
+			};
+
+			return SqlDb.SqlDb.Search(SqlDb.SqlDb.GetSqlConnection, funcAssembler, sql);
+		}
 
 	}
 

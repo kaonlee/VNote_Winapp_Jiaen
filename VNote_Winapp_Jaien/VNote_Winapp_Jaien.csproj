@@ -110,6 +110,12 @@
     <Compile Include="Controls\FormAddVNote.Designer.cs">
       <DependentUpon>FormAddVNote.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FormEditAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormEditAccounts.Designer.cs">
+      <DependentUpon>FormEditAccounts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\FormReadEditVNote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="Controls\FormAddVNote.resx">
       <DependentUpon>FormAddVNote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormEditAccounts.resx">
+      <DependentUpon>FormEditAccounts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\FormReadEditVNote.resx">
       <DependentUpon>FormReadEditVNote.cs</DependentUpon>

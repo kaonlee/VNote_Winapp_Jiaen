@@ -44,7 +44,7 @@ namespace VNote_Winapp_Jaien
 			}
 			catch(Exception ex) 
 			{
-				MessageBox.Show($"{ex} 請再試一次！");
+				MessageBox.Show($"{ex.Message} 請再試一次！");
 			}
 		}
 
